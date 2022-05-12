@@ -26,16 +26,12 @@ export default class RandomPlanet extends Component {
 
   getRandomPlanet(id) {
     this.swapi.getPlanet(id)
-      .then((planet) => {
-        debugger
-        this.setRandomPlanet(planet)
-      }
-      )
+      .then(planet => this.setRandomPlanet(planet))
       .catch(() => this.setError())
   }
 
   componentDidMount() {
-    setInterval(() => this.getRandomPlanet(Math.floor(Math.random() * 25) + 3), 4000)
+    setInterval(() => this.getRandomPlanet(Math.floor(Math.random() * 20) + 3), 5000)
   };
 
 
