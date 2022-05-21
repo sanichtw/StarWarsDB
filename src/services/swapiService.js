@@ -41,12 +41,16 @@ export default class SwapiService {
     return this._transformStarship(starship)
   }
 
-  getImageUrlPerson({id}) {
+  getImageUrlPerson({ id }) {
     return `https://starwars-visualguide.com/assets/img/characters/${id}.jpg`
   }
 
-  getImageUrlStarship({id}) {
+  getImageUrlStarship({ id }) {
     return `https://starwars-visualguide.com/assets/img/starships/${id}.jpg`
+  }
+
+  getImageUrlPlanet({ id }) {
+    return `https://starwars-visualguide.com/assets/img/planets/${id}.jpg`
   }
 
   _extractId(id) {
